@@ -1,0 +1,4 @@
+  - platform: rpi_gpio
+    ports:
+      18: gas
+      23: movimento

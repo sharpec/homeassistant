@@ -1,0 +1,25 @@
+    casa_sveglia_temperatura:
+      name: 1.Sveglia
+      initial: 20
+      min: 16
+      max: 23
+      step: 1
+    casa_lavoro_temperatura:
+      name: 2.Lavoro
+      initial: 17
+      min: 16
+      max: 23
+      step: 1
+    casa_pomeriggio_temperatura:
+      name: 3.Pomeriggio
+      initial: 20
+      min: 16
+      max: 23
+      step: 1
+    casa_notte_temperatura:
+      name: 4.Notte
+      initial: 17
+      min: 16
+      max: 23
+      step: 1
+

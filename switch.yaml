@@ -1,0 +1,6 @@
+  - platform: rpi_gpio
+    ports:
+      26: termosifoni
+      20: corridoio
+      21: sala
+    invert_logic: true
