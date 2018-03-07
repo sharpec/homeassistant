@@ -1,0 +1,6 @@
+media_player.salotto:
+  platform: cast
+  unique_id: 4779cdb7-aa8c-28fb-a86b-743a0b14783b
+media_player.tv:
+  platform: cast
+  unique_id: d4f54b19-0bf8-e995-8456-57d851221362

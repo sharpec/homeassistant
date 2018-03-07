@@ -1,0 +1,6 @@
+#- platform: gpslogger
+- platform: ping
+  hosts:
+    enzo: 192.168.3.112
+    marta: 192.168.3.192
+  #count: 5	

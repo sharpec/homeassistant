@@ -1,0 +1,46 @@
+default_view:
+ view: yes
+ icon: mdi:home
+ entities:
+   - device_tracker.enzo
+   - device_tracker.marta
+   - sensor.dht_sensor_temperature
+   - sensor.dht_sensor_humidity
+   - climate.Casa
+#   - camera.ingresso
+   - light.cucina
+   - light.scrivania
+   - switch.corridoio
+   - switch.sala
+   - media_player.salotto
+termosifoni:
+  name: Temperature
+  view: yes
+  icon: mdi:temperature-celsius
+  entities:
+   - sensor.dht_sensor_temperature
+   - sensor.dht_sensor_humidity
+   - automation.1_sveglia_ore6
+   - automation.2_Lavoro_ore8
+   - automation.3_Pomeriggio_ore13
+   - automation.4_Sera_ore20
+   - automation.5_Notte_ore22
+   - input_number.casa_sveglia_temperatura
+   - input_number.casa_lavoro_temperatura
+   - input_number.casa_pomeriggio_temperatura
+   - input_number.casa_sera_temperatura
+   - input_number.casa_notte_temperatura
+   #- group.input_number
+   - switch.termosifoni
+settings:
+  name: Settings
+  view: yes
+  icon: mdi:settings
+  entities:
+   - sensor.speedtest_ping
+   - sensor.speedtest_download
+   - sensor.speedtest_upload
+   - automation.reboot_hassio
+   #- group.automation
+   #- group.input_number
+   #- switch.termosifoni

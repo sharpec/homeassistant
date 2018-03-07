@@ -1,6 +1,22 @@
   - platform: dht
-    sensor: DHT11
+    sensor: DHT22
     pin: 17
     monitored_conditions:
       - temperature
       - humidity
+  - platform: speedtest
+    minute:
+      - 0
+      - 30
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+#  - platform: darksky
+#    api_key: 1627ab0b53a75bdbfa48a8cca387ef33
+#    monitored_conditions:
+#       - summary
+#       - temperature
+#       - hourly_summary
+#       - temperature_max
+#  - platform: yr

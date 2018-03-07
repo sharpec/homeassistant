@@ -1,0 +1,8 @@
+  - platform: flux_led
+    devices:
+      192.168.3.113:
+        name: cucina
+        mode: "rgb"
+      192.168.3.195:
+        name: scrivania
+        mode: "rgb"  

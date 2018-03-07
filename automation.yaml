@@ -1,0 +1,158 @@
+#- alias: Notte Elisa
+#  trigger:
+#    platform: time
+#    at: "20:30:00"
+#  action:
+#    - service: tts.google_say
+#      entity_id: media_player.Salotto
+#      data:
+#        message: 'ciao elisa, sono le otto e mezza è ora di andare a dormire!'
+#        language: 'it'
+#- alias: Buongiorno Elisa
+#  trigger:
+#    platform: time
+#    at: "07:00:00"
+#  action:
+#    - service: tts.google_say
+#      entity_id: media_player.Salotto
+#      data:
+#        message: 'ciao elisa, sono le sette, è ora di svegliarsi e fare colazione!'
+#        language: 'it'
+#- alias: random_led_cucina
+#  trigger:
+#    platform: time
+#    seconds: '/45'
+#  action:
+#    service: light.turn_on
+#    data:
+#      entity_id: light.led_cucina
+#      effect: random
+- alias: accensione_led_cucina
+  trigger:
+    platform: time
+    at: '18:30:00'
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.led_cucina
+      rgb_color: [255,255,255]
+      #color_temp: 154
+      brightness: 100
+- alias: spegnimento_led_cucina
+  trigger:
+    platform: time
+    at: '21:00:00'
+  action:
+    service: light.turn_off
+    data:
+      entity_id: light.led_cucina
+- alias: "1 Sveglia ore6"
+  initial_state: True
+  hide_entity: False
+  trigger:
+    platform: time
+    at: '06:00:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+      - sun
+  action:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ states.input_number.casa_sveglia_temperatura.state | int }}"
+        operation_mode: Heat
+- alias: "2 Lavoro ore8"
+  initial_state: True
+  hide_entity: False
+  trigger:
+    platform: time
+    at: '08:00:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ states.input_number.casa_lavoro_temperatura.state | int }}"
+        operation_mode: Heat
+- alias: "3 Pomeriggio ore13"
+  initial_state: True
+  hide_entity: False
+  trigger:
+    platform: time
+    at: '13:00:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+      - sun
+  action:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ states.input_number.casa_pomeriggio_temperatura.state | int }}"
+        operation_mode: Heat
+- alias: "4 Sera ore20"
+  initial_state: True
+  hide_entity: False
+  trigger:
+    platform: time
+    at: '20:00:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+      - sun
+  action:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ states.input_number.casa_sera_temperatura.state | int }}"
+        operation_mode: Heat
+- alias: "5 Notte ore22"
+  initial_state: True
+  hide_entity: False
+  trigger:
+    platform: time
+    at: '22:00:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+      - sun
+  action:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ states.input_number.casa_notte_temperatura.state | int }}"
+        operation_mode: Heat
+
+- alias: reboot_hassio
+  trigger:
+    platform: time
+    at: '02:00:00'
+  action:
+      service: shell_command.set_command_reboot
