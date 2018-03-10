@@ -1,8 +1,8 @@
   project_id: ha65125-cea80
-  client_id: RDYBKzuGdpQDy0s5n6A2Wij8yRXF5yYNJ94BNffTSJ2fq0RRRl7tJ20zW8idPgfXxFE1dqPDiEbXJ3nV0vwH9uCoxWqh7pvvYW9m8ktBPmvjv03MYcxASz1ByzjXeMa2
-  access_token: 4/sj2GrofcLoGs_dgJNH9MqLxPY3eAK-POJ9rPM7vNWIs
+  client_id: !secret assistant_client_id
+  access_token: !secret assistant_access_token
   #agent_user_id: [a string to identify user]
-  api_key: AIzaSyAiEyA4zBeqT7H_Eo5vhKshXFFSaPHo04k
+  api_key: !secret assistant_api_key
   exposed_domains:
     - switch
     - light
