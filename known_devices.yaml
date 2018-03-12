@@ -14,6 +14,14 @@ marta:
   picture: !secret marta_pict
   track: true
   vendor: HUAWEI
+iole:
+  hide_if_away: true
+  icon:
+  mac: !secret iole_mac
+  name: Iole
+  picture:
+  track: true
+  vendor: samsung
 #enzogps:
 #  hide_if_away: false
 #  icon:
