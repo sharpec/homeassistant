@@ -1,0 +1,24 @@
+enzo:
+  hide_if_away: false
+  icon:
+  mac: !secret enzo_mac
+  name: Enzo
+  picture: !secret enzo_pict
+  track: true
+  vendor: HUAWEI
+marta:
+  hide_if_away: false
+  icon:
+  mac: !secret marta_mac
+  name: Marta
+  picture: !secret marta_pict
+  track: true
+  vendor: HUAWEI
+#enzogps:
+#  hide_if_away: false
+#  icon:
+#  mac:
+#  name: enzogps
+#  picture:
+#  track: true
+#  vendor:
