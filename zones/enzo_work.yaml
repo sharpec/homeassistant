@@ -1,0 +1,5 @@
+- name: Work
+  latitude: !secret ENZO_WORK_LATITUDE
+  longitude: !secret ENZO_CAMERON_WORK_LONGITUDE
+  radius: 250
+  icon: mdi:briefcase
