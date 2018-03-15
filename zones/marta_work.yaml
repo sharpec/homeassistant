@@ -1,0 +1,5 @@
+- name: Marta
+  latitude: !secret marta_lat
+  longitude: !secret marta_lon
+  radius: 150
+  icon: mdi:web
