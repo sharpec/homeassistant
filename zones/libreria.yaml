@@ -1,0 +1,5 @@
+- name: Libreria
+  latitude: !secret libreria_lat
+  longitude: !secret libreria_lon
+  radius: 150
+  icon: mdi:book-open-page-variant
