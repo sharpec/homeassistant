@@ -13,6 +13,7 @@ default_view:
    - switch.corridoio
    - switch.sala
    - media_player.salotto
+   - media_player.tv
 termosifoni:
   name: Temperature
   view: yes
