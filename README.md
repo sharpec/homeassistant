@@ -14,3 +14,6 @@ https://www.amazon.it/gp/product/B00E0NTPP4/ref=oh_aui_detailpage_o04_s00?ie=UTF
 
 # Cavi di collegamento
 https://www.amazon.it/gp/product/B00QV7O052/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1
+
+# Interruttore Sonoff Wifi + Sonoff-Tasmota
+https://www.amazon.it/gp/product/B06WWNBD3Y/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1
